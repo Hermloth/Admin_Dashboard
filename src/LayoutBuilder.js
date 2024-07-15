@@ -1,5 +1,6 @@
 function BuildLayout () {
-console.log("Build Layout Loaded")
+console.log("Build Layout Loaded");
+
 
 const body = document.body;
 
@@ -20,8 +21,8 @@ sideBarContainer.appendChild(sideBarTitleContainer);
 
 const sideBarIconContainer = document.createElement("div");
 sideBarIconContainer.classList.add("DashboardIcon");
-sideBarIconContainer.textContent = "test icon"
 sideBarTitleContainer.appendChild(sideBarIconContainer);
+
 
 const sideBarHeadingContainer = document.createElement("div");
 sideBarHeadingContainer.classList.add("DashboardTitle");

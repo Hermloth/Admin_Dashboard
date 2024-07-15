@@ -33,20 +33,22 @@ body{
 .TitleContainer{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    border: 1px solid red;
+
 }
 
 .DashboardTitle{
     display: flex;
-    align-content: center;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
+    
 }
 
 .Title{
-    padding: 0px;
+    display: flex;
+    padding-left: 15px;
     margin: 0px;
     font-size: 1.5em;
-    align-self: center;
+    text-align: center;
     color: white;
 }
 
@@ -55,6 +57,11 @@ body{
     align-content: center;
     justify-content: center;
 }
+
+.Icon{
+    height: 48px;
+}
+
 
 /* Header Styles */
 
