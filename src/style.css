@@ -1,7 +1,76 @@
+:root{
+    --primaryColour: #009bd6;
+    --secondaryColour: #E0E0E0;
+    --tertiaryColour: #FAFAFA;
+    --backgroundCanvas: #e2e8f0;
+}
+
 body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
     background-color: grey;
 }
 
 .parentDiv{
-    color: red;
+    display: grid;
+    grid-template-columns: minmax(180px, 300px) repeat(4, max(100px, 20%));
+    grid-template-rows: 30px 1fr 7fr 1fr 30px;
+    height: 100vh;
+    background-color: var(--backgroundCanvas);
+}
+
+/* SideBar Styles */
+
+.Sidebar{
+    grid-area: 1/1/5/2;
+    background-color: var(--primaryColour);
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+.TitleContainer{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border: 1px solid red;
+}
+
+.DashboardTitle{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.Title{
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.5em;
+    align-self: center;
+    color: white;
+}
+
+.DashboardIcon{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Header Styles */
+
+/* Body Styles */
+
+/* Footer Styles */
+
+.Footer{
+    grid-area: 5/1/6/6;
+    background-color: var(--tertiaryColour);
+    text-align: center;
+    width: 100vw;
+}
+
+/* Test Class */
+.TestClass{
+    background-color: purple;
+    border: 1px solid red;
 }
