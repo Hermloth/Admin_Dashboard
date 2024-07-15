@@ -1,3 +1,3 @@
-const buildLayout = require('./LayoutBuilder');
+const BuildLayout = require('./LayoutBuilder');
 
-buildLayout.BuildLayout;
+BuildLayout();

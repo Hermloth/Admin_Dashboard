@@ -1,0 +1,19 @@
+{
+  "name": "admin_dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Hermloth/Admin_Dashboard.git"
+  },
+  "author": "Hermloth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hermloth/Admin_Dashboard/issues"
+  },
+  "homepage": "https://github.com/Hermloth/Admin_Dashboard#readme"
+}
