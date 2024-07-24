@@ -2,6 +2,7 @@ import './style.css';
 import {BuildLayout} from './LayoutBuilder'
 import Icon from './view-dashboard.svg';
 
+
 BuildLayout();
 
 const sideBarIconContainer = document.querySelector(".DashboardIcon")

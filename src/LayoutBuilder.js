@@ -19,6 +19,8 @@ export function BuildLayout () {
 	parentDiv.classList.add("parentDiv");
 	document.body.appendChild(parentDiv);
 
+// Build sidebar with header
+
 	const sideBarContainer = document.createElement("div");
 	sideBarContainer.classList.add("Sidebar");
 	parentDiv.appendChild(sideBarContainer);
@@ -31,7 +33,6 @@ export function BuildLayout () {
 	sideBarIconContainer.classList.add("DashboardIcon");
 	sideBarTitleContainer.appendChild(sideBarIconContainer);
 
-
 	const sideBarHeadingContainer = document.createElement("div");
 	sideBarHeadingContainer.classList.add("DashboardTitle");
 	sideBarTitleContainer.appendChild(sideBarHeadingContainer);
@@ -41,15 +42,17 @@ export function BuildLayout () {
 	dashboardTitle.textContent = "Dashboard";
 	sideBarHeadingContainer.appendChild(dashboardTitle);
 
+// Build Footer
+
 	const footer = document.createElement("div");
 	footer.classList.add("Footer")
 	footer.textContent = `This is not a real website, this is a project assignment for the Odin Project. Author: Hermloth - Webpack: ${process.env.IS_PRODUCTION} ${GLOBAL_TEST}`
 	parentDiv.appendChild(footer);
 
+// Build Menu Items
+
 	const menuListContainer = document.createElement("div");
 	menuListContainer.classList.add("MenuListContainer");
-
-
 	const adminMenuListContainer = document.createElement("div");
 	adminMenuListContainer.classList.add("MenuListContainer");
 	var menuItemsText = ["Home","Profile","Message","History","Tasks","Communities"];
