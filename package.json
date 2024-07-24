@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack serve --open"
+    "build": "cross-env NODE_ENV=development webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack",
+    "watch": "cross-env NODE_ENV=development webpack --watch",
+    "start": "cross-env NODE_ENV=development webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/Hermloth/Admin_Dashboard#readme",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^4.0.0",

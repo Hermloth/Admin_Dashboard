@@ -1,5 +1,5 @@
 import './style.css';
-const BuildLayout = require('./LayoutBuilder');
+import {BuildLayout} from './LayoutBuilder'
 import Icon from './view-dashboard.svg';
 
 BuildLayout();
