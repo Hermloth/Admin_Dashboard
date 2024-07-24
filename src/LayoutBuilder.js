@@ -98,6 +98,9 @@ export function BuildLayout () {
 	sideBarContainer.appendChild(menuListContainer);
 	sideBarContainer.appendChild(adminMenuListContainer);
 	
+// Set up header
+const headerFrame = docuemnt.createElement("div");
+headerFrame.classList.add("TestClass")
 
 
 
