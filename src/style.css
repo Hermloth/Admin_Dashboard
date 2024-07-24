@@ -27,7 +27,7 @@ body{
     grid-area: 1/1/5/2;
     background-color: var(--primaryColour);
     display: grid;
-    grid-template-rows: 50px 1fr 50px;
+    grid-template-rows: 50px 1fr 1fr 1fr 50px;
 }
 
 .TitleContainer{
@@ -56,12 +56,24 @@ body{
     display: flex;
     align-content: center;
     justify-content: center;
+    padding-left: 5px;
 }
 
-.Icon{
-    height: 48px;
+.menuContainerRow{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }
 
+.menuRowText{
+    display: flex;
+    padding-left: 15px;
+    margin: 0px;
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    align-items: center;
+    font-weight: 900;
+}
 
 /* Header Styles */
 
