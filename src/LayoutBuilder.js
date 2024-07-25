@@ -7,6 +7,9 @@ import CommunitiesIcon from './assets/account-group.svg';
 import SettingsIcon from './assets/cog.svg';
 import HelpIcon from './assets/help-box.svg';
 import PrivacyIcon from './assets/shield-check.svg';
+import bellIcon from './assets/bell.svg';
+import searchIcon from './assets/search.svg';
+
 
 export function BuildLayout () {
 	console.log("Build Layout Loaded");
@@ -99,14 +102,30 @@ export function BuildLayout () {
 	sideBarContainer.appendChild(adminMenuListContainer);
 	
 // Set up header
-const headerFrame = docuemnt.createElement("div");
-headerFrame.classList.add("TestClass")
+const headerFrame = document.createElement("div");
+headerFrame.classList.add("HeaderContainer")
+parentDiv.appendChild(headerFrame);
 
+const searchBarContainer = document.createElement("div");
+searchBarContainer.classList.add("searchBarContainer");
+headerFrame.appendChild(searchBarContainer);
 
+const welcomeContainer = document.createElement("div");
+welcomeContainer.classList.add("welcomeContainer");
+headerFrame.appendChild(welcomeContainer);
 
+const searchIconImage = document.createElement('img');
+searchIconImage.src = searchIcon;
+searchIconImage.style = "width: 25px; margin-left: 8px"
+searchIconImage.classList.add("SearchBarIcon")
+searchBarContainer.appendChild(searchIconImage);
 
+const seachbar = document.createElement("input");
+seachbar.classList.add("searchbar");
+searchBarContainer.appendChild(seachbar);
 
-
-
+const notificationAndAccountContainer = document.createElement("div");
+notificationAndAccountContainer.classList.add("TestClass");
+searchBarContainer.appendChild(notificationAndAccountContainer);
 
 }

@@ -76,6 +76,41 @@ body{
 }
 
 /* Header Styles */
+.HeaderContainer{
+    display: grid;
+    grid-area: 1/2/3/7;
+    background-color: white;
+    box-shadow: 0px 3px 5px grey;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: repeat(1fr);
+}
+
+.searchbar{
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 0px;
+    height: 20px;
+    align-self: center;
+    width: 100%;
+    margin-right: 8px;
+}
+
+
+.searchBarContainer{
+    display: grid;
+    grid-template-columns: 40px 3fr 2fr;
+    gap: 10px;
+}
+
+.SearchBarIcon{
+    align-self: center;
+}
+
+.welcomeContainer{
+    display: grid;
+    grid-template-columns: 40px 3fr 2fr;
+    gap: 10px; 
+}
 
 /* Body Styles */
 
@@ -92,4 +127,12 @@ body{
 .TestClass{
     background-color: purple;
     border: 1px solid red;
+}
+
+.BorderClass{
+    border: 1px solid purple;
+}
+
+.searchBarContainer, .welcomeContainer {
+    border: 1px solid orange;
 }
