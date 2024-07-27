@@ -21,6 +21,18 @@ body{
     background-color: var(--backgroundCanvas);
 }
 
+.ButtonClass{
+    background-color: var(--primaryColour);
+    border-radius: 50px;
+    color: white;
+    font-weight: 900;
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    align-self: center;
+}
+
 /* SideBar Styles */
 
 .Sidebar{
@@ -79,11 +91,94 @@ body{
 .HeaderContainer{
     display: grid;
     grid-area: 1/2/3/7;
+    
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
+
     background-color: white;
     box-shadow: 0px 3px 5px grey;
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: repeat(1fr);
 }
+
+.HSectionA {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-area: 1/1/2/3;
+}
+
+.HSectionB {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-area: 2/1/3/3;
+}
+.searchBarContainer{
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    padding-right: 20px;
+    gap: 10px;
+    grid-column: 1;
+}
+.welcomeContainer{
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 1fr 2fr; 
+    grid-area: 2/1/3/2;
+}
+
+.UserWelcomeAvatar{
+    display: flex;
+    grid-area: 1/1/3/2;
+}
+
+.WelcomeIcon{
+    padding-left: 10px;
+    align-self: center;
+    height: 50px;
+}
+
+.UserWelcomeText1{
+    grid-area: 1/2/2/3;
+    font-weight: 900;
+}
+
+.UserWelcomeText2{
+    grid-area: 2/2/3/3;
+    font-weight: 900;
+    align-self: center;
+    font-size: x-large;
+}
+
+.NotificationsContainer{
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 20px 60px 1fr 3fr 20px ;
+
+}
+
+.UserName{
+    align-content: center;
+    text-align: left;
+    font-size: larger;
+    font-weight: 900;
+    grid-area: 2/4/3/5;
+}
+
+.userIconRight{
+    height: 75px;
+}
+
+
+.UserIcon{
+    grid-area: 2/3/3/4;
+}
+
+.ControlButtonContainer{
+grid-area: 2/2/3/3;
+display: flex;
+justify-content: space-around;
+}
+
+
+
 
 .searchbar{
     border-radius: 10px;
@@ -95,21 +190,15 @@ body{
     margin-right: 8px;
 }
 
-
-.searchBarContainer{
-    display: grid;
-    grid-template-columns: 40px 3fr 2fr;
-    gap: 10px;
-}
-
 .SearchBarIcon{
     align-self: center;
+    padding-left: 10px;
 }
 
-.welcomeContainer{
-    display: grid;
-    grid-template-columns: 40px 3fr 2fr;
-    gap: 10px; 
+.NotificationBellIcon{
+    grid-area: 2/2/3/3;
+    align-self: center;
+    margin: 0px;
 }
 
 /* Body Styles */
@@ -124,15 +213,21 @@ body{
 }
 
 /* Test Class */
-.TestClass{
+.TestClass1{
     background-color: purple;
     border: 1px solid red;
 }
 
-.BorderClass{
-    border: 1px solid purple;
+.TestClass2{
+    background-color: purple;
+    border: 1px solid green;
 }
 
-.searchBarContainer, .welcomeContainer {
-    border: 1px solid orange;
+.TestClass3{
+    background-color: purple;
+    border: 1px solid cyan;
+}
+
+.TestBorderClass{
+    border: 1px solid purple;
 }

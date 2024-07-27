@@ -9,6 +9,8 @@ import HelpIcon from './assets/help-box.svg';
 import PrivacyIcon from './assets/shield-check.svg';
 import bellIcon from './assets/bell.svg';
 import searchIcon from './assets/search.svg';
+import {CreateDivDomElement} from './CreateDomElement'
+import userAvatar from './assets/user-avatar.jpg'
 
 
 export function BuildLayout () {
@@ -106,13 +108,15 @@ const headerFrame = document.createElement("div");
 headerFrame.classList.add("HeaderContainer")
 parentDiv.appendChild(headerFrame);
 
-const searchBarContainer = document.createElement("div");
-searchBarContainer.classList.add("searchBarContainer");
-headerFrame.appendChild(searchBarContainer);
+CreateDivDomElement("div", "HSectionA", headerFrame);
+const HSectionA = document.querySelector(".HSectionA");
 
-const welcomeContainer = document.createElement("div");
-welcomeContainer.classList.add("welcomeContainer");
-headerFrame.appendChild(welcomeContainer);
+CreateDivDomElement("div", "HSectionB", headerFrame);
+const HSectionB = document.querySelector(".HSectionB");
+
+// Search Bar Container
+CreateDivDomElement("div", "searchBarContainer", HSectionA);
+const searchBarContainer = document.querySelector(".searchBarContainer");
 
 const searchIconImage = document.createElement('img');
 searchIconImage.src = searchIcon;
@@ -124,8 +128,75 @@ const seachbar = document.createElement("input");
 seachbar.classList.add("searchbar");
 searchBarContainer.appendChild(seachbar);
 
-const notificationAndAccountContainer = document.createElement("div");
-notificationAndAccountContainer.classList.add("TestClass");
-searchBarContainer.appendChild(notificationAndAccountContainer);
+// Notifications Container
+CreateDivDomElement("div", "NotificationsContainer", HSectionA);
+const notificationAndAccountContainer = document.querySelector(".NotificationsContainer");
+
+const notificationsIcon = document.createElement("img");
+notificationsIcon.src = bellIcon;
+notificationsIcon.classList.add("NotificationBellIcon");
+notificationAndAccountContainer.appendChild(notificationsIcon);
+
+CreateDivDomElement("div","UserIcon",notificationAndAccountContainer);
+const UserIconContainer = document.querySelector(".UserIcon");
+const UserIconRight = document.createElement("img");
+UserIconRight.classList.add("userIconRight")
+UserIconRight.src = userAvatar;
+UserIconContainer.appendChild(UserIconRight);
+
+
+CreateDivDomElement("div","UserName",notificationAndAccountContainer);
+const UserNameDisplay = document.querySelector(".UserName");
+UserNameDisplay.textContent = "Morgan Oakley"
+
+
+// Button Container
+CreateDivDomElement("div", "ControlButtonContainer", HSectionB);
+const ControlButtonContainer = document.querySelector(".ControlButtonContainer")
+
+const NewButton = document.createElement("button");
+NewButton.classList.add("ButtonClass");
+NewButton.textContent = "New";
+ControlButtonContainer.appendChild(NewButton);
+
+const UploadButton = document.createElement("button");
+UploadButton.classList.add("ButtonClass");
+UploadButton.textContent = "Upload";
+ControlButtonContainer.appendChild(UploadButton);
+
+const ShareButton = document.createElement("button");
+ShareButton.classList.add("ButtonClass");
+ShareButton.textContent = "Share";
+ControlButtonContainer.appendChild(ShareButton);
+
+// Welcome Container
+CreateDivDomElement("div", "welcomeContainer", HSectionB);
+const welcomeContainer = document.querySelector(".welcomeContainer");
+
+CreateDivDomElement("div", "UserWelcomeAvatar", welcomeContainer);
+const UserWelcomeAvatar = document.querySelector(".UserWelcomeAvatar")
+
+const UserWelcomeAvatarImg = document.createElement("img");
+UserWelcomeAvatarImg.classList.add("WelcomeIcon");
+UserWelcomeAvatar.appendChild(UserWelcomeAvatarImg);
+
+UserWelcomeAvatarImg.src = userAvatar;
+
+
+CreateDivDomElement("div", "UserWelcomeText1", welcomeContainer);
+const UserWelcomeText1 = document.querySelector(".UserWelcomeText1");
+UserWelcomeText1.textContent = "Hi there,"
+
+CreateDivDomElement("div", "UserWelcomeText2", welcomeContainer);
+const UserWelcomeText2 = document.querySelector(".UserWelcomeText2");
+UserWelcomeText2.textContent = "Morgan Oakley (@morgan)"
+
+
+
+
+
+
+
+
 
 }
