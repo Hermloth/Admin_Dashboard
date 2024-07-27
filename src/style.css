@@ -3,6 +3,7 @@
     --secondaryColour: #E0E0E0;
     --tertiaryColour: #FAFAFA;
     --backgroundCanvas: #e2e8f0;
+    --cardSideBorder: #f1c04d;
 }
 
 body{
@@ -15,7 +16,7 @@ body{
 
 .parentDiv{
     display: grid;
-    grid-template-columns: minmax(180px, 300px) repeat(4, max(100px, 20%));
+    grid-template-columns: minmax(180px, 300px) repeat(4, max(100px, 1fr));
     grid-template-rows: 30px 1fr 7fr 1fr 30px;
     height: 100vh;
     background-color: var(--backgroundCanvas);
@@ -90,7 +91,7 @@ body{
 /* Header Styles */
 .HeaderContainer{
     display: grid;
-    grid-area: 1/2/3/7;
+    grid-area: 1/2/3/6;
     
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 2fr 1fr;
@@ -202,6 +203,210 @@ justify-content: space-around;
 }
 
 /* Body Styles */
+
+.MainContentContainer{
+    grid-area: 3/2/5/6;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.ProjectsContainer{
+    grid-area: 1/1/3/2;
+
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+.ProjectAreaHeading{
+    grid-area: 1/1/2/2;
+
+    font-size: 20px;
+    font-weight: 900;
+    padding-left: 10px;
+    padding-bottom: 5px;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.ProjectCardArea{
+    grid-area: 2/1/3/2;
+
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(200px, 50% ,350px));
+    overflow: auto;
+}
+
+.ProjectCard{    
+    display: grid;
+    grid-template-columns: 5px 1fr 1fr;
+    grid-template-rows: 30px 1fr 45px;
+
+    background-color: white;
+    border-radius: 8px;
+    height: 200px;
+    width: max(300px, 1fr);
+    margin: 10px;
+}
+
+.CardBorder{
+    background-color: var(--cardSideBorder);
+    border-radius: 8px 0px 0px 8px;
+    grid-area: 1/1/4/2;
+}
+
+.CardTitle{
+    grid-area: 1/2/2/4;
+    font-weight: 800;
+    align-content: end;
+    padding-left: 5px;
+
+}
+
+.CardDescription{
+    grid-area: 2/2/3/4;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 3px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack:end;
+
+}
+
+.CardButtons{
+    display: flex;
+    grid-area: 3/2/4/4;
+    align-content: center;
+    justify-content: end;
+    padding: 8px;
+    gap: 8px;
+}
+
+
+
+.AnouncementsContainer{    
+    grid-area: 1/2/2/3;
+    padding: 10px;
+    
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+.AnnouncementsCard{
+    display: flex;
+    flex-direction: column;
+    grid-area: 2/1/3/2;
+    border-radius: 8px;
+    background-color: white;
+    padding: 5px;
+    overflow: auto;
+
+}
+
+.AnnouncementsHeading{
+    grid-area: 1/1/2/2;
+
+    font-size: 20px;
+    font-weight: 900;
+    padding-left: 10px;
+    padding-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.AnnouncementsRow{
+    display: grid;
+    grid-template-rows: 25px 1fr;
+    border-bottom: 3px solid grey;
+    padding-bottom: 5px;
+    padding-top: 5px;    
+}
+
+.AnnouncementsRow:last-of-type{
+    border-bottom: none;
+}
+.AnnouncementsRowHeader{
+    display: flex;
+    grid-area: 1/1/2/2;
+    font-weight: 800;
+    padding-top: 3px;
+    padding-left: 5px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    align-content: end;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.AnnouncementsRowDesc{
+    grid-area: 2/1/3/2;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 3px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack:end;
+    
+}  
+
+.TrendingContainer{
+    border: 1px solid purple;
+    
+    grid-area: 2/2/3/3;
+    
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    padding: 8px;
+}
+
+.TrendingHeader{
+    grid-area: 1/1/2/2;
+
+    font-size: 20px;
+    font-weight: 900;
+    padding-left: 10px;
+    padding-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.TrendingCard{
+    border: 1px solid red;
+
+    background-color: white;
+    border-radius: 8px;
+}
+
+.TrendingRow{
+
+}
+
+.TrendingRowImage{
+
+}
+
+.TrendingRowHeader{
+
+}
+
+.TrendingRowCallout{
+    
+}
 
 /* Footer Styles */
 
