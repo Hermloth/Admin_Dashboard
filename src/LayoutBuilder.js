@@ -1,3 +1,4 @@
+import DashboardIcon from './assets/dashboard.svg';
 import HomeIcon from './assets/home.svg';
 import AccountIcon from './assets/card-account-details.svg';
 import MessageIcon from './assets/message.svg';
@@ -43,18 +44,16 @@ export function BuildLayout () {
 	sideBarTitleContainer.classList.add("TitleContainer");
 	sideBarContainer.appendChild(sideBarTitleContainer);
 
-	const sideBarIconContainer = document.createElement("div");
+	const sideBarIconContainer = document.createElement("img");
+	sideBarIconContainer.src = DashboardIcon;
 	sideBarIconContainer.classList.add("DashboardIcon");
 	sideBarTitleContainer.appendChild(sideBarIconContainer);
 
+	
 	const sideBarHeadingContainer = document.createElement("div");
 	sideBarHeadingContainer.classList.add("DashboardTitle");
+	sideBarHeadingContainer.textContent = "Dashboard";
 	sideBarTitleContainer.appendChild(sideBarHeadingContainer);
-
-	const dashboardTitle = document.createElement("h1");
-	dashboardTitle.classList.add("Title");
-	dashboardTitle.textContent = "Dashboard";
-	sideBarHeadingContainer.appendChild(dashboardTitle);
 
 // Build Footer
 
@@ -68,7 +67,7 @@ export function BuildLayout () {
 	const menuListContainer = document.createElement("div");
 	menuListContainer.classList.add("MenuListContainer");
 	const adminMenuListContainer = document.createElement("div");
-	adminMenuListContainer.classList.add("MenuListContainer");
+	adminMenuListContainer.classList.add("AdminMenuListContainer");
 	var menuItemsText = ["Home","Profile","Message","History","Tasks","Communities"];
 	var menuItemsIcons = [HomeIcon, AccountIcon,MessageIcon,HistoryIcon,TaskIcon,CommunitiesIcon];
 	var adminMenuItemsText = ["Settings","Support","Privacy"];
@@ -141,12 +140,14 @@ searchBarContainer.appendChild(seachbar);
 CreateDivDomElement("div", "NotificationsContainer", HSectionA);
 const notificationAndAccountContainer = document.querySelector(".NotificationsContainer");
 
+const notificationsLineContainer = CreateDivElement("NotificationsLineContainer", notificationAndAccountContainer);
+
 const notificationsIcon = document.createElement("img");
 notificationsIcon.src = bellIcon;
 notificationsIcon.classList.add("NotificationBellIcon");
-notificationAndAccountContainer.appendChild(notificationsIcon);
+notificationsLineContainer.appendChild(notificationsIcon);
 
-CreateDivDomElement("div","UserIcon",notificationAndAccountContainer);
+CreateDivDomElement("div","UserIcon",notificationsLineContainer);
 const UserIconContainer = document.querySelector(".UserIcon");
 const UserIconRight = document.createElement("img");
 UserIconRight.classList.add("userIconRight")
@@ -154,7 +155,7 @@ UserIconRight.src = userAvatar;
 UserIconContainer.appendChild(UserIconRight);
 
 
-CreateDivDomElement("div","UserName",notificationAndAccountContainer);
+CreateDivDomElement("div","UserName",notificationsLineContainer);
 const UserNameDisplay = document.querySelector(".UserName");
 UserNameDisplay.textContent = "Morgan Oakley"
 
