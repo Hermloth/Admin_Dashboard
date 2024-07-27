@@ -272,9 +272,24 @@ const TrendingCard = CreateDivElement("TrendingCard", TrendingAreaContainer);
 	// TEST Trending Generator
 	const numberOfTestTrends = 4;
 	const testTrendNames = ["@tegan","@morgan","@kendall","@alex"];
-	const testTrendImages = [,,,];
+	const testTrendImages = [avatar1,avatar2,avatar3,avatar4];
 	const testTrendCallouts = ["World Peace Builder","Super Cool Project","Life Changing App","No Traffic Maker"];
+	for (var s = 0; s <  numberOfTestTrends; s++){
+		const element = CreateDivElement("TrendingRow", TrendingCard);
+		
+		const image = document.createElement("img");
+		image.classList.add("TrendingRowImage");
+		image.src = testTrendImages[s];
+		element.appendChild(image);
 
+		const trendingName = CreateDivElement("TrendingRowHeader", element);
+		trendingName.textContent = testTrendNames[s];
+
+		const trendingDesc = CreateDivElement("TrendingRowDesc", element);
+		trendingDesc.textContent = testTrendCallouts[s];
+
+
+	}
 
 
 }
